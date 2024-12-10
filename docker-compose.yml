@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  wisevision_data_black_box_manager:
+    build:
+      context: .
+    container_name: wisevision_data_black_box_container
+    network_mode: "host"
+    ipc: "host"
+    pid: "host"
+    stdin_open: true
+    tty: true
+    environment:
+      - DB_ADDRESS=localhost
+      - DB_PORT=8086
