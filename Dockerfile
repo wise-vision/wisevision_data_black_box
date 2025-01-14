@@ -1,4 +1,4 @@
-FROM wisevision/ros_with_wisevision_msgs:humble
+FROM wisevision/ros_with_wisevision_msgs_and_wisevision_core:humble
 
 WORKDIR /root/wisevision_data_black_box_ws
 
@@ -15,7 +15,7 @@ RUN apt-get update && \
 SHELL ["/bin/bash", "-c"]
 
 RUN /bin/bash -c "source /opt/ros/humble/setup.bash && \
-source /root/wisevision_msgs_ws/install/setup.bash && \
+source /root/wisevision_ws/install/setup.bash && \
 colcon build --symlink-install"
 
 ENTRYPOINT ["/bin/bash", "-c", "source /root/wisevision_data_black_box_ws/install/setup.bash && ros2 run wisevision_data_black_box black_box"]
