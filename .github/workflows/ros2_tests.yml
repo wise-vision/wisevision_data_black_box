@@ -59,3 +59,8 @@ jobs:
         cd wisevision_data_black_box_ws
         colcon test --packages-select black_box
         colcon test-result --verbose
+
+    - name: Clean up workspace
+      if: always()
+      run: |
+        sudo rm -rf wisevision_data_black_box_ws
