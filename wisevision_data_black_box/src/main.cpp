@@ -8,7 +8,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-// Copyright (c) 2024, WiseVision. All rights reserved.
 #include <cstdlib>
 
 #include "zenoh_extractor.hpp"
